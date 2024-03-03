@@ -1,14 +1,17 @@
 
 
 const fib=(n)=>{
-    if(n==0){
-        return 0;
-    }
-    if (n==1 || n==2){
-        return 1;
-    }
-    return fib(n-1)+fib(n-2);
+   const fib=[0,1]
+
+   for(let i=2;i<n;i++){
+        fib[i]=fib[i-1]+fib[i-2];
+   }
+
+   return fib
 }
 
-console.log(fib(0))
+console.log(fib(5))
 
+
+
+//time complexity o(n)
